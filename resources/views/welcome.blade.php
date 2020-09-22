@@ -17,6 +17,7 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}">
     </head>
     <body class="antialiased">
+        <div class="overlay"></div>
         <div class="relative flex items-top justify-center min-h-screen dark:bg-gray-900 sm:items-center sm:pt-0">
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -32,13 +33,23 @@
                 </div>
             @endif
 
-            <div class="text-center">
-                <h1>Job Tracker</h1>
-                <p>Keep track of your jobs</p>
-                <div class="loginbuttons">
-                   <a class="btn btn-login" href="{{ route('login') }}">Login</a>
-                   <a class="btn btn-register" href="{{ route('register') }}">Register</a>
+            <div class="banner">
+                <img src="images/background.jpg">
+                <div class="content">
+                    <h1>Job Tracker</h1>
+                    <p>Keep track of your jobs</p>
+                    <div class="loginbuttons">
+                        <a class="btn btn-login" href="{{ route('login') }}">Login</a>
+                        <a class="btn btn-register" href="{{ route('register') }}">Register</a>
+                    </div>
                 </div>
+            </div>
+            <div class="clouds">
+                <img src="images/cloud1.png" style="--i:1;">
+                <img src="images/cloud2.png" style="--i:2;">
+                <img src="images/cloud3.png" style="--i:3;">
+                <img src="images/cloud4.png" style="--i:4;">
+                <img src="images/cloud5.png" style="--i:5;">
             </div>
             
             </div>

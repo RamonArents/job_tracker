@@ -1,0 +1,47 @@
+*,
+*:after,
+*::before{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color:black;
+    font-family: 'Cambria';
+    font-size:14px;
+    color:white;
+}
+.text-gray-700{
+    color:white;
+}
+h1{
+    font-size:5em;
+}
+.text-center p{
+    font-size:2em;
+}
+.loginbuttons {
+    margin-top:30px;
+}
+.loginbuttons .btn{
+    padding:20px;
+    font-size:20px;
+    border:1px solid white;
+    margin-top:20px;
+    width:200px;
+    height:80px;
+    background-color:transparent;
+    display:inline-block;
+}
+.loginbuttons .btn{
+    color:white;
+}
+.loginbuttons .btn:hover{
+    background-color:white;
+    color:black;
+}
+.btn-register{
+    margin-left:10px;
+}
+  
+

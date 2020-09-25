@@ -10,6 +10,14 @@ body{
     font-family: 'Cambria';
     font-size:14px;
     color:white;
+    background:#3f8ffc;
+}
+h1{
+    font-size:4em;
+}
+.w-full{
+    background-color:#162c3b;
+    color:white;
 }
 form input[type="text"], input[type="email"], input[type="password"]{
     outline: none;
@@ -25,7 +33,7 @@ form input[type="text"]:focus, input[type="email"]:focus, input[type="password"]
     border-color: transparent;
     border-bottom: 2px solid gray;
 }
-form input[type="text"]:focus:invalid:required, input[type="email"]:focus:invalid:required, input[type="password"]:focus:invalid:required{
+form input[type="text"]:invalid:focus, input[type="email"]:invalid:focus, input[type="password"]:invalid:focus{
     border-bottom:2px solid red;
 }
 .container .formBx form .inputBox label{
@@ -37,6 +45,7 @@ form input[type="text"]:focus:invalid:required, input[type="email"]:focus:invali
     letter-spacing: 1px;
     transition: all 0.2s;
     margin-left:5px;
+    color:white;
 }
 /* fa icons */
 .fa{
@@ -80,9 +89,6 @@ form input[type="text"]:focus:invalid:required, input[type="email"]:focus:invali
     color:#fff;
     font-size:1.5em; 
 }
-h1{
-    font-size:4em;
-}
 .loginbuttons {
     margin-top:30px;
     position: relative;
@@ -121,6 +127,10 @@ h1{
     bottom:0;
     max-width: 100%;
     animation: animate calc(8s * var(--i)) linear infinite;
+}
+/* register page */
+.bg-gray-100{
+    --bg-opacity: 0;
 }
 @keyframes animate{
     0%{

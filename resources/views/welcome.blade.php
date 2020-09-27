@@ -33,25 +33,17 @@
                 </div>
             @endif
 
-            <div class="banner">
-                <img src="images/background.jpg">
-                <div class="content">
-                    <h1>Job Tracker</h1>
-                    <p>Keep track of your jobs</p>
-                    <div class="loginbuttons">
-                        <a class="btn btn-login" href="{{ route('login') }}">Login</a>
-                        <a class="btn btn-register" href="{{ route('register') }}">Register</a>
+                <div class="banner">
+                    <img src="images/background.jpg">
+                    <div class="content">
+                        <h1>Job Tracker</h1>
+                        <p>Keep track of your jobs</p>
+                        <div class="loginbuttons">
+                            <a class="btn btn-login" href="{{ route('login') }}">Login</a>
+                            <a class="btn btn-register" href="{{ route('register') }}">Register</a>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="clouds">
-                <img src="images/cloud1.png" style="--i:1;">
-                <img src="images/cloud2.png" style="--i:2;">
-                <img src="images/cloud3.png" style="--i:3;">
-                <img src="images/cloud4.png" style="--i:4;">
-                <img src="images/cloud5.png" style="--i:5;">
-            </div>
-            
+                </div>            
             </div>
         </div>
     </body>

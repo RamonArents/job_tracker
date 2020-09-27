@@ -10,11 +10,13 @@ body{
     font-family: 'Cambria';
     font-size:14px;
     color:white;
-    /* background:#3f8ffc; */
     background:#276fd3; 
 }
 h1{
     font-size:4em;
+}
+button{
+    background:#276fd3 !important;
 }
 .w-full{
     background-color:#162c3b;

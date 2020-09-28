@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <div class="container">
+    <div class="dashboard-container">
         <div class="card">
             <div class="content">
                 test

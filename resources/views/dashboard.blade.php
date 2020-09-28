@@ -7,8 +7,13 @@
 
     <div class="dashboard-container">
         <div class="card">
+            <div class="header">
+                <span class="fa fa-trash"></span><span class="fa fa-edit"></span><span class="fa fa-heart-o"></span>
+            </div>
             <div class="content">
-                test
+                <h2>Sera Business</h2>
+                <p>PHP en databases</p>
+                <a href="https://www.sera.nl/vacatures/vacature-ervaren-php-programmeur.html">Website</a>
             </div>
         </div>
         <div class="card">

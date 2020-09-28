@@ -123,7 +123,6 @@ form input[type="text"]:focus, input[type="email"]:focus, input[type="password"]
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 10px;
-
     padding: 10px;
     margin:20px;
 }
@@ -131,6 +130,7 @@ form input[type="text"]:focus, input[type="email"]:focus, input[type="password"]
     margin:30px;
     background-color: #162c3b;
     min-height:300px;
+    max-width:500px;
     border-radius:0.5rem;
 }
 .dashboard-container .card .content{
@@ -163,6 +163,9 @@ form input[type="text"]:focus, input[type="email"]:focus, input[type="password"]
 @media (max-width:600px){
     .btn-register{
         margin-left:0px;
+    }
+    .dashboard-container{
+        grid-template-columns: auto;
     }
 }
 

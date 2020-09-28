@@ -17,7 +17,7 @@ class AddApplicationTable extends Migration
             $table->string('id')->primary();
             $table->foreignId('user_id')->nullable()->index();
             $table->string('name');
-            $table->string('job_description');
+            $table->text('job_description');
             $table->string('website');
             $table->timestamps();
         });

@@ -1,10 +1,13 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Voeg vacature toe') }}
-        </h2>
-        <p>test</p>
-    </x-slot>
+    <x-jet-authentication-card>
+        <x-slot name="header">
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                {{ __('Voeg vacature toe') }}
+            </h2>
+        </x-slot>
+        <x-slot name="logo">
+        </x-slot>
+
     <x-jet-validation-errors class="mb-4" />
         <div class="container">
             <div class="formBx">
@@ -18,11 +21,11 @@
 
                     <div class="mt-4 inputBox">
                         <x-jet-label value="{{ __('Beschrijving') }}" />
-                        <x-jet-input class="block mt-1 w-full" type="text" name="description" :value="old('description')" required autocomplete="off" />
+                        <textarea class="block mt-1 w-full" type="text" name="description" :value="old('description')" rows="2" cols="1" required autocomplete="off"></textarea>
                     </div>
 
                     <div class="mt-4 inputBox">
-                        <span class="fa fa-lock"></span><x-jet-label value="{{ __('Website') }}" />
+                        <x-jet-label value="{{ __('Website') }}" />
                         <x-jet-input class="block mt-1 w-full" type="text" name="website" :value="old('website')" required autocomplete="off" />
                     </div>
 
@@ -34,4 +37,5 @@
                 </form>
             </div>
         </div>
+    </x-jet-authentication-card>
 </x-app-layout>

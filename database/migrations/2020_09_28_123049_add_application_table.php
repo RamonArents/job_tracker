@@ -14,11 +14,11 @@ class AddApplicationTable extends Migration
     public function up()
     {
         Schema::create('applications', function (Blueprint $table) {
-            $table->string('id')->primary();
-            $table->foreignId('user_id')->nullable()->index();
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('user_id');
             $table->string('name');
             $table->text('job_description');
-            $table->string('website');
+            $table->text('website');
             $table->timestamps();
         });
     }

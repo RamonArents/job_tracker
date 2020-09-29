@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Application extends Model
 {
@@ -23,9 +24,14 @@ class Application extends Model
      * @var array
      */
     protected $fillable = [
+        'user_id',
         'name',
         'job_description',
         'website',
     ];
+
+    public function User(){
+        $this->belongsTo(App\Models::User);
+    }
 
 }

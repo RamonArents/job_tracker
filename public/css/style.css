@@ -185,7 +185,7 @@ form input[type="text"]:focus, input[type="email"]:focus, input[type="password"]
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 20px;
+    padding: 22px;
     border-radius:100%;
     background:white !important;
     height:60px;

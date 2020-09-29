@@ -46,5 +46,31 @@ class ManageApplicationController extends Controller
 
         return redirect('/dashboard')->with('success', 'Vacature succesvol opgeslagen.');
     }
+    /**
+     * Shows the edit page to edit a job
+     * @param $id of the job
+     * @return view
+     */
+    public function getEdit($id){
+
+        $getJob = Application::find($id);
+
+        return view('edit', ['job' => $getJob]);
+    }
+    public function editApplication(Request $request, $id){
+        $validatedData = $request->validate([
+            'name' => 'required|max:255',
+            'description' => 'required',
+            'website' => 'required|max:255'
+        ]);
+
+        $editData = Application::find($id);
+        $editData->name = $request->input('name');
+        $editData->job_description = $request->input('description');
+        $editData->website = $request->input('website');
+        $editData->save();
+
+        return redirect('/dashboard')->with('success', 'Vacature succesvol bijgewerkt.');
+    }
     
 }

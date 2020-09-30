@@ -9,7 +9,7 @@
         @foreach($jobs as $job)
         <div class="card">
             <div class="header">
-                <span class="fa fa-trash"></span>
+                <a href="{{ route('getDelete', ['id' => $job->id]) }}"><span class="fa fa-trash"></span></a>
                 <a href="{{ route('getEdit', ['id' => $job->id]) }}"><span class="fa fa-edit"></span></a>
                 <span class="fa fa-heart-o"></span>
             </div>

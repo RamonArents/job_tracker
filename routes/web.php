@@ -23,4 +23,6 @@ Route::get('/add','App\HTTP\Controllers\ManageApplicationController@getAdd')->na
 Route::post('/addApp', 'App\HTTP\Controllers\ManageApplicationController@addApplication')->name('addApplication');
 Route::get('/edit/{id}','App\HTTP\Controllers\ManageApplicationController@getEdit')->name('getEdit');
 Route::post('/editApp/{id}', 'App\HTTP\Controllers\ManageApplicationController@editApplication')->name('editApplication');
+Route::get('/delete/{id}','App\HTTP\Controllers\ManageApplicationController@getDelete')->name('getDelete');
+Route::post('/deleteApp/{id}', 'App\HTTP\Controllers\ManageApplicationController@deleteApplication')->name('deleteApplication');
 

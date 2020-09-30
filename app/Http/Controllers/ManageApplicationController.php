@@ -72,5 +72,29 @@ class ManageApplicationController extends Controller
 
         return redirect('/dashboard')->with('success', 'Vacature succesvol bijgewerkt.');
     }
-    
+    /**
+     * Gets the delete page
+     * 
+     * @param $id of the selected job
+     * @return view
+     */
+    public function getDelete($id){
+        $getJob = Application::find($id);
+
+        return view('delete', ['job' => $getJob]);
+    }
+    /**
+     * Deletes an application. Softdeletes are used
+     *
+     * @param  array $request
+     * @param $id from the application to delete
+     * @return view
+     */
+    public function deleteApplication(Request $request, $id)
+    {
+        $application = Application::find($id);
+        $application->delete();
+
+        return redirect('/dashboard')->with('success', 'Job succesvol verwijderd.');
+    }
 }

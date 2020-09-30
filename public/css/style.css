@@ -196,6 +196,25 @@ form input[type="text"]:focus, input[type="email"]:focus, input[type="password"]
     color:black;
     font-size:20px;
 }
+/* delete page */
+.delete-header{
+    color:black;
+    font-size:25px;
+    margin-top:-8px;
+}
+.delete-button{
+    margin-top:20px;
+    margin-right:20px;
+    background:#CF2703 !important;
+}
+.delete-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.delete-container .card{
+    width:500px;
+}
 /* media queries */
 @media (max-width:600px){
     .btn-register{
@@ -204,10 +223,29 @@ form input[type="text"]:focus, input[type="email"]:focus, input[type="password"]
     .dashboard-container{
         grid-template-columns: auto;
     }
+    .delete-header-div{
+        height:80px !important;
+    }
+    .delete-button{
+        margin-right:32px;
+        margin-top:0px;
+    }
 }
 @media (min-width: 640px){
     .sm\:max-w-md {
         max-width: 55rem;
+    }
+}
+@media (max-width: 320px){
+    .delete-button{
+        margin-bottom:20px;
+        margin-top:0px;
+        margin-right:15px;
+    }
+}
+@media (max-width: 280px){
+    .delete-header-div{
+        height:120px !important;
     }
 }
 

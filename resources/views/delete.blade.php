@@ -5,10 +5,10 @@
         </h2>
     </x-slot>
     <x-jet-validation-errors class="mb-4" />
-    <div class="dashboard-container">
+    <div class="dashboard-container delete-container">
         <div class="card">
-            <div class="header">
-                <h2 class="delete-header">Delete this job?</h2>
+            <div class="header delete-header-div">
+                <h2 class="delete-header">Verwijder deze vacature?</h2>
             </div>
             <div class="content">
                 <h2>{{ $job->name }}</h2>
@@ -22,7 +22,7 @@
                         <x-jet-input class="block mt-1 w-full" type="hidden" name="website" value="{{ $job->website }}" required autocomplete="off" />
                      
                         <div class="flex items-center justify-end mt-4">
-                            <x-jet-button class="ml-4">
+                            <x-jet-button class="ml-4 delete-button">
                                 {{ __('Verwijder vacature') }}
                             </x-jet-button>
                         </div>

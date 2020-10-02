@@ -195,6 +195,16 @@ form input[type="text"]:focus, input[type="email"]:focus, input[type="password"]
     color:black;
     font-size:20px;
 }
+.favorite{
+    background:none !important;
+    float:right;
+}
+.heart-black{
+    color:black;
+}
+.heart-red{
+    color:red !important;
+}
 /* delete page */
 .delete-header{
     color:black;

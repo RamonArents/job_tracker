@@ -14,7 +14,7 @@ class ManageApplicationController extends Controller
      */
     public function showDashboard(){
         
-        $getJobs = Application::where('user_id', Auth::id())->get();
+        $getJobs = Application::where('user_id', Auth::id())->orderBy('favorite', 'desc')->get();
 
         return view('dashboard', ['jobs' => $getJobs]);
     }

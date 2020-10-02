@@ -14,7 +14,7 @@
                 <form action="{{ route('addFavorite', ['id' => $job->id]) }}">
                     @csrf
                     <input type="hidden" name="favorite" value="{{ $job->favorite == 1 ? 0 : 1 }}">
-                    <button type="submit"><span class="fa fa-heart-o"></span></button>
+                    <button class="favorite" type="submit"><span class="fa fa-heart-o {{ $job->favorite == 0 || $job->favorite == null ? 'heart-black' : 'heart-red'  }}"></span></button>
                 </form>
             </div>
             <div class="content">

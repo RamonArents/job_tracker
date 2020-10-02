@@ -18,7 +18,6 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', 'App\HTTP\Controllers\ManageApplicationController@showDashboard')->name('showData')->name('dashboard');
-//TODO: Set this in an auth middleware
 Route::middleware(['auth:sanctum', 'verified'])->get('/add','App\HTTP\Controllers\ManageApplicationController@getAdd')->name('getAdd');
 Route::middleware(['auth:sanctum', 'verified'])->post('/addApp', 'App\HTTP\Controllers\ManageApplicationController@addApplication')->name('addApplication');
 Route::middleware(['auth:sanctum', 'verified'])->get('/edit/{id}','App\HTTP\Controllers\ManageApplicationController@getEdit')->name('getEdit');

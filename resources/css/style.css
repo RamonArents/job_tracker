@@ -224,6 +224,29 @@ form input[type="text"]:focus, input[type="email"]:focus, input[type="password"]
 .delete-container .card{
     width:500px;
 }
+/* Profile page */
+.profile-style h3, p, label{
+    color:white !important;
+}
+.profile-style button{
+    border:none;
+    color:white;
+}
+.profile-style button:hover{
+    color:white;
+}
+.profile-style .py-5 {
+    background-color:#162c3b;
+}
+.profile-style .py-3 {
+    background-color:#162c3b;
+}
+.max-w-xl{
+    color:white;
+}
+.text-gray-600{
+    color:white;
+}
 /* media queries */
 @media (max-width:600px){
     .btn-register{

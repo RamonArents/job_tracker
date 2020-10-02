@@ -13,7 +13,7 @@
                 <a href="{{ route('getEdit', ['id' => $job->id]) }}"><span class="fa fa-edit"></span></a>
                 <form action="{{ route('addFavorite', ['id' => $job->id]) }}">
                     @csrf
-                    <input type="hidden" name="favorite" value="{{ $job->id == 1 ? 0 : 1 }}">
+                    <input type="hidden" name="favorite" value="{{ $job->favorite == 1 ? 0 : 1 }}">
                     <button type="submit"><span class="fa fa-heart-o"></span></button>
                 </form>
             </div>

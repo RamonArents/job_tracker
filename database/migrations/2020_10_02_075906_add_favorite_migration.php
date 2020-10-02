@@ -14,7 +14,7 @@ class AddFavoriteMigration extends Migration
     public function up()
     {
         Schema::table('applications', function (Blueprint $table) {
-            $table->boolean('favorite');
+            $table->boolean('favorite')->nullable();
         });
     }
 

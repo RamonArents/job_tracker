@@ -11,7 +11,11 @@
             <div class="header">
                 <a href="{{ route('getDelete', ['id' => $job->id]) }}"><span class="fa fa-trash"></span></a>
                 <a href="{{ route('getEdit', ['id' => $job->id]) }}"><span class="fa fa-edit"></span></a>
-                <span class="fa fa-heart-o"></span>
+                <form action="{{ route('addFavorite', ['id' => $job->id]) }}">
+                    @csrf
+                    <input type="hidden" name="favorite" value="{{ $job->id == 1 ? 0 : 1 }}">
+                    <button type="submit"><span class="fa fa-heart-o"></span></button>
+                </form>
             </div>
             <div class="content">
                 <h2>{{ $job->name }}</h2>

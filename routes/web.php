@@ -25,4 +25,5 @@ Route::get('/edit/{id}','App\HTTP\Controllers\ManageApplicationController@getEdi
 Route::post('/editApp/{id}', 'App\HTTP\Controllers\ManageApplicationController@editApplication')->name('editApplication');
 Route::get('/delete/{id}','App\HTTP\Controllers\ManageApplicationController@getDelete')->name('getDelete');
 Route::post('/deleteApp/{id}', 'App\HTTP\Controllers\ManageApplicationController@deleteApplication')->name('deleteApplication');
+Route::get('/addFavorite/{id}', 'App\HTTP\Controllers\ManageApplicationController@addFavorite')->name('addFavorite');
 

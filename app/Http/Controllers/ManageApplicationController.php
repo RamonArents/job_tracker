@@ -90,11 +90,24 @@ class ManageApplicationController extends Controller
      * @param $id from the application to delete
      * @return view
      */
-    public function deleteApplication(Request $request, $id)
+    public function deleteApplication($id)
     {
         $application = Application::find($id);
         $application->delete();
 
-        return redirect('/dashboard')->with('success', 'Job succesvol verwijderd.');
+        return redirect('/dashboard')->with('success', 'Vacature succesvol verwijderd.');
+    }
+    /**
+     * Adds favorites to jobs
+     * @param Illuminate\Http\Request $request
+     * @param $id from the favorite job
+     * @return view
+     */
+    public function addFavorite(Request $request, $id){
+        $application = Application::find($id);
+        $application->favorite = $request->input('favorite');
+        $application->save();
+
+        return redirect('/dashboard')->with('success', 'Vacature aan favorieten toegevoegd.');
     }
 }

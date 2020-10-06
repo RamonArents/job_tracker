@@ -29,6 +29,20 @@
                         <x-jet-input class="block mt-1 w-full" type="text" name="website" :value="old('website')" required autocomplete="off" />
                     </div>
 
+                    <div class="mt-4 inputBox">
+                        <x-jet-label value="{{ __('Locatie') }}" />
+                        <x-jet-input class="block mt-1 w-full" type="text" name="location" :value="old('location')" required autocomplete="off" />
+                    </div>
+
+                    <div class="mt-4 inputBox">
+                        <x-jet-label value="{{ __('Aangenomen') }}" />
+                        <select name="success">
+                            <option value="">Sollicitatie nog sturen.</option>
+                            <option value="1">Ja</option>
+                            <option value="0">Nee</option>
+                        </select>
+                    </div>
+
                     <div class="flex items-center justify-end mt-4">
                         <x-jet-button class="ml-4">
                             {{ __('Voeg vacature toe') }}

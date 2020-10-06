@@ -34,7 +34,8 @@ class ManageApplicationController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|max:255',
             'description' => 'required',
-            'website' => 'required|max:255'
+            'website' => 'required|max:255',
+            'location' => 'required|max:255'
         ]);
 
         $addData = new Application;
@@ -42,6 +43,8 @@ class ManageApplicationController extends Controller
         $addData->name = $request->input('name');
         $addData->job_description = $request->input('description');
         $addData->website = $request->input('website');
+        $addData->location = $request->input('location');
+        $addData->success = $request->input('success');
         $addData->save();
 
         return redirect('/dashboard')->with('success', 'Vacature succesvol opgeslagen.');
@@ -68,6 +71,7 @@ class ManageApplicationController extends Controller
         $editData->name = $request->input('name');
         $editData->job_description = $request->input('description');
         $editData->website = $request->input('website');
+        $editData->location = $request->input('location');
         $editData->save();
 
         return redirect('/dashboard')->with('success', 'Vacature succesvol bijgewerkt.');

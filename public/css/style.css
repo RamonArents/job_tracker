@@ -33,6 +33,21 @@ textarea:focus{
 button{
     background:#276fd3 !important;
 }
+select{
+    background-color:#162c3b;
+    font-size:14px;
+    border:none;
+    border-bottom:1px solid gray;
+    width:auto;
+    height: auto;
+    padding:5px;
+}
+select:focus{
+    outline:none;
+}
+select:hover{
+    cursor:pointer;
+}
 .w-full{
     background-color:#162c3b;
     color:white;

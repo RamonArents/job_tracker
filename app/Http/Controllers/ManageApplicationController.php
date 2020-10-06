@@ -64,7 +64,8 @@ class ManageApplicationController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|max:255',
             'description' => 'required',
-            'website' => 'required|max:255'
+            'website' => 'required|max:255',
+            'location' => 'required|max:255'
         ]);
 
         $editData = Application::find($id);
@@ -72,6 +73,7 @@ class ManageApplicationController extends Controller
         $editData->job_description = $request->input('description');
         $editData->website = $request->input('website');
         $editData->location = $request->input('location');
+        $editData->success = $request->input('success');
         $editData->save();
 
         return redirect('/dashboard')->with('success', 'Vacature succesvol bijgewerkt.');

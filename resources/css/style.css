@@ -263,7 +263,12 @@ form input[type="text"]:focus, input[type="email"]:focus, input[type="password"]
     color:white;
 }
 /* media queries */
-@media (max-width:600px){
+@media (max-width:55em){
+    .dashboard-container{
+        grid-template-columns: auto auto;
+    }
+}
+@media (max-width:42.85em){
     .btn-register{
         margin-left:0px;
     }
@@ -293,6 +298,11 @@ form input[type="text"]:focus, input[type="email"]:focus, input[type="password"]
 @media (max-width: 280px){
     .delete-header-div{
         height:120px !important;
+    }
+}
+@media (max-width:20em){
+    .dashboard-container{
+        margin-left:-5px;
     }
 }
 

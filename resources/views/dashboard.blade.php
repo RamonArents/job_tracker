@@ -21,8 +21,8 @@
                 <h2>{{ $job->name }}</h2>
                 <p>{{ $job->job_description }}</p>
                 <a href="{{ $job->website }}" target="_blank">Website</a>
-                <p>Locatie: {{ $job->location }}</p>
-                <p>Aangenomen: {{ $job->success }}</p>
+                <p class="normal-font">Locatie: {{ $job->location }}</p>
+                <p class="normal-font">Aangenomen: {{ $job->success }}</p>
             </div>
         </div>
         @endforeach

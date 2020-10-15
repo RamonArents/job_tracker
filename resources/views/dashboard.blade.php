@@ -22,11 +22,7 @@
                 <p>{{ $job->job_description }}</p>
                 <a href="{{ $job->website }}" target="_blank">Website</a>
                 <p>Locatie: {{ $job->location }}</p>
-                @if($job->success === null)
-                    <p>Aangenomen: Nog solliciteren.</p>
-                @else
-                    <p>Aangenomen: {{ $job->success == 1 ? 'Ja' : 'Nee' }}</p>
-                @endif
+                <p>Aangenomen: {{ $job->success }}</p>
             </div>
         </div>
         @endforeach

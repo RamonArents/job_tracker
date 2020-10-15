@@ -35,7 +35,8 @@ class ManageApplicationController extends Controller
             'name' => 'required|max:255',
             'description' => 'required',
             'website' => 'required|max:255',
-            'location' => 'required|max:255'
+            'location' => 'required|max:255',
+            'success' => 'required|max:255'
         ]);
 
         $addData = new Application;
@@ -65,7 +66,8 @@ class ManageApplicationController extends Controller
             'name' => 'required|max:255',
             'description' => 'required',
             'website' => 'required|max:255',
-            'location' => 'required|max:255'
+            'location' => 'required|max:255',
+            'success' => 'required|max:255'
         ]);
 
         $editData = Application::find($id);

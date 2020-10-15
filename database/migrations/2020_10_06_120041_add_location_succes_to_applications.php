@@ -14,7 +14,7 @@ class AddLocationSuccesToApplications extends Migration
     public function up()
     {
         Schema::table('applications', function (Blueprint $table) {
-            $table->boolean('success')->nullable();
+            $table->string('success');
             $table->string('location');
         });
     }

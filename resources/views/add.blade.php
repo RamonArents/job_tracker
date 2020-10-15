@@ -37,9 +37,12 @@
                     <div class="mt-4 inputBox">
                         <x-jet-label value="{{ __('Aangenomen:') }}" />
                         <select name="success">
-                            <option value="">Sollicitatie nog sturen.</option>
-                            <option value="1">Ja</option>
-                            <option value="0">Nee</option>
+                            <option value="Sollicitatie nog sturen.">Sollicitatie nog sturen.</option>
+                            <option value="Sollicitatie verstuurd.">Sollicitatie verstuurd.</option>
+                            <option value="Op eerste gesprek.">Op eerste gesprek.</option>
+                            <option value="Op tweede gesprek.">Op tweede gesprek.</option>
+                            <option value="Ja">Ja</option>
+                            <option value="Nee">Nee</option>
                         </select>
                     </div>
 

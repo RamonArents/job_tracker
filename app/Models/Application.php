@@ -28,7 +28,8 @@ class Application extends Model
         'name',
         'job_description',
         'website',
-        'location'
+        'location',
+        'success'
     ];
 
     public function User(){

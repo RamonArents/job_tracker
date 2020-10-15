@@ -263,6 +263,10 @@ form input[type="text"]:focus, input[type="email"]:focus, input[type="password"]
 .text-gray-600{
     color:white;
 }
+/* responsive menu */
+.text-gray-600 {
+    color: #6b7280;
+}
 /* media queries */
 @media (max-width:55em){
     .dashboard-container{

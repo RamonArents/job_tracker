@@ -225,6 +225,9 @@ form input[type="text"]:focus, input[type="email"]:focus, input[type="password"]
 .heart-red{
     color:red !important;
 }
+.no-jobs-jet{
+
+}
 /* delete page */
 .delete-header{
     color:black;

@@ -11,32 +11,32 @@
                     @csrf
 
                     <div class="inputBox">
-                        <span class="fa fa-user"></span><x-jet-label value="{{ __('Name') }}" />
+                        <span class="fa fa-user"></span><x-jet-label value="{{ __('Naam:') }}" />
                         <x-jet-input class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="off" />
                     </div>
 
                     <div class="mt-4 inputBox">
-                        <span class="fa fa-envelope-square"></span><x-jet-label value="{{ __('Email') }}" />
+                        <span class="fa fa-envelope-square"></span><x-jet-label value="{{ __('Email:') }}" />
                         <x-jet-input class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="off" />
                     </div>
 
                     <div class="mt-4 inputBox">
-                        <span class="fa fa-lock"></span><x-jet-label value="{{ __('Password') }}" />
+                        <span class="fa fa-lock"></span><x-jet-label value="{{ __('Wachtwoord:') }}" />
                         <x-jet-input class="block mt-1 w-full" type="password" name="password" required autocomplete="off" />
                     </div>
 
                     <div class="mt-4 inputBox">
-                        <span class="fa fa-lock"></span><x-jet-label value="{{ __('Confirm Password') }}" />
+                        <span class="fa fa-lock"></span><x-jet-label value="{{ __('Bevestig Wachtwoord:') }}" />
                         <x-jet-input class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="off" />
                     </div>
 
                     <div class="flex items-center justify-end mt-4">
                         <a class="underline text-sm text-white-600 hover:text-white-900" href="{{ route('login') }}">
-                            {{ __('Already registered?') }}
+                            {{ __('Al geregistreerd?') }}
                         </a>
 
                         <x-jet-button class="ml-4">
-                            {{ __('Register') }}
+                            {{ __('Registreer') }}
                         </x-jet-button>
                     </div>
                 </form>

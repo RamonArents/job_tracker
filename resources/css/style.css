@@ -282,6 +282,10 @@ form input[type="text"]:focus, input[type="email"]:focus, input[type="password"]
 .text-gray-600 {
     color: #6b7280;
 }
+/* modal box */
+.style-modal-box{
+    background-color:#162c3b !important;
+}
 /* media queries */
 @media (max-width:55em){
     .dashboard-container{

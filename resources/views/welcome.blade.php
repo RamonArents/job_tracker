@@ -40,7 +40,7 @@
                         <p>Keep track of your jobs</p>
                         <div class="loginbuttons">
                             <a class="btn btn-login" href="{{ route('login') }}">Login</a>
-                            <a class="btn btn-register" href="{{ route('register') }}">Register</a>
+                            <a class="btn btn-register" href="{{ route('register') }}">Registreer</a>
                         </div>
                     </div>
                 </div>            

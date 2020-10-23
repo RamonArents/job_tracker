@@ -112,7 +112,7 @@
             <div class="mt-3 space-y-1">
                 <!-- Account Management -->
                 <x-jet-responsive-nav-link href="/user/profile" :active="request()->routeIs('profile.show')">
-                    {{ __('Profile') }}
+                    {{ __('Profiel') }}
                 </x-jet-responsive-nav-link>
 
                 <!-- Authentication -->
@@ -122,7 +122,7 @@
                     <x-jet-responsive-nav-link href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                        {{ __('Logout') }}
+                        {{ __('Uitloggen') }}
                     </x-jet-responsive-nav-link>
                 </form>
 

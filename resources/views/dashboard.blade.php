@@ -6,8 +6,8 @@
     </x-slot>
 
     <div class="dashboard-container">
-        @if(empty($jobs))
-            <p class="no-jobs-jet">You have no jobs yet. Click <a href="{{ route('getAdd') }}">here</a> to add.</p>
+        @if(!count($jobs))
+            <p class="no-jobs-jet">U heeft nog geen vacatures. Klik <a class="add-link" href="{{ route('getAdd') }}">hier</a> om toe te voegen.</p>
         @else
             @foreach($jobs as $job)
                 <div class="card">

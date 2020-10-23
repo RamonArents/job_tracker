@@ -11,6 +11,7 @@ body{
     font-size:14px;
     color:white;
     background:#276fd3; 
+    overflow-x: hidden;
 }
 h1{
     font-size:4em;
@@ -225,8 +226,16 @@ form input[type="text"]:focus, input[type="email"]:focus, input[type="password"]
 .heart-red{
     color:red !important;
 }
-.no-jobs-jet{
-
+.dashboard-container .no-jobs-jet{
+    left:0;
+    right:0;
+    position: absolute;
+    margin:0 auto;
+    max-width: 400px;
+    padding-left:10px;
+}
+.add-link{
+    text-decoration: underline;
 }
 /* delete page */
 .delete-header{
@@ -326,6 +335,9 @@ form input[type="text"]:focus, input[type="email"]:focus, input[type="password"]
     .not-allowed-to-delete{
         margin-top:300px;
         transform: translateX(-20%);
+    }
+    .dashboard-container .no-jobs-jet{
+        margin-top:300px;
     }
 }
 

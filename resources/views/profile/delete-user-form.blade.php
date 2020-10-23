@@ -25,10 +25,10 @@
             </x-slot>
 
             <x-slot name="content">
-                {{ __('Weet je zeker dat je je account definitief wil verwijderen. Vul dan je wachtwoord in om te bevestigen.') }}
+                {{ __('Weet je zeker dat je je account definitief wil verwijderen? Vul dan je wachtwoord in om te bevestigen.') }}
 
                 <div class="mt-4" x-data="{}" x-on:confirming-delete-user.window="setTimeout(() => $refs.password.focus(), 250)">
-                    <x-jet-input type="password" class="mt-1 block w-3/4" placeholder="Password"
+                    <x-jet-input type="password" class="mt-1 block w-3/4"
                                 x-ref="password"
                                 wire:model.defer="password"
                                 wire:keydown.enter="deleteUser" />

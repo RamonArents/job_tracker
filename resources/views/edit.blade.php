@@ -9,6 +9,7 @@
         </x-slot>
         <x-jet-validation-errors class="mb-4" />
             <div class="container">
+            @if(\Illuminate\Support\Facades\Auth::user()->id == $job->user_id)
                 <div class="formBx">
                     <form method="POST" action="{{ route('editApplication', ['id' => $job->id]) }}">
                         @csrf
@@ -53,6 +54,9 @@
                         </div>
                     </form>
                 </div>
+                @else
+                    <p>U mag deze vacature niet bewerken.</p>
+                @endif
             </div>
     </x-jet-authentication-card>
 </x-app-layout>

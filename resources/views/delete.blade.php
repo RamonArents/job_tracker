@@ -6,6 +6,7 @@
     </x-slot>
     <x-jet-validation-errors class="mb-4" />
     <div class="dashboard-container delete-container">
+    @if(\Illuminate\Support\Facades\Auth::user()->id == $job->user_id)
         <div class="card">
             <div class="header delete-header-div">
                 <h2 class="delete-header">Verwijder deze vacature?</h2>
@@ -28,6 +29,8 @@
                         </div>
                     </form>
         </div>
-        
+    @else
+        <p class="not-allowed-to-delete">U mag deze vacature niet verwijderen.</p>
+    @endif
             
 </x-app-layout>

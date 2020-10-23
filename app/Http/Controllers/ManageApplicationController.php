@@ -9,6 +9,15 @@ use Auth;
 class ManageApplicationController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    /**
      * Returns the dashboard page with the job data
      * @return view
      */
@@ -61,6 +70,12 @@ class ManageApplicationController extends Controller
 
         return view('edit', ['job' => $getJob]);
     }
+     /**
+     * Saves the edited data of the edit page
+     * @param $request the request to send the new data to the db
+     * @param $id of the job
+     * @return view
+     */
     public function editApplication(Request $request, $id){
         $validatedData = $request->validate([
             'name' => 'required|max:255',

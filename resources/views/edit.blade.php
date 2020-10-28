@@ -21,7 +21,7 @@
 
                         <div class="mt-4 inputBox">
                             <x-jet-label value="{{ __('Beschrijving:') }}" />
-                            <textarea class="block mt-1 w-full" type="text" name="description" rows="2" cols="1" required autocomplete="off">{{ $job->job_description }}</textarea>
+                            <textarea class="block mt-1 w-full" name="description" rows="2" cols="1" required autocomplete="off">{{ $job->job_description }}</textarea>
                         </div>
 
                         <div class="mt-4 inputBox">

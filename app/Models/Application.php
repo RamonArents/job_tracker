@@ -32,6 +32,10 @@ class Application extends Model
         'success'
     ];
 
+    /**
+     * Connects the Jobs with the User table
+     * @return void
+     */
     public function User(){
         $this->belongsTo(App\Models::User);
     }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Application;
 use Auth;
+use Validator;
 
 class ManageApplicationController extends Controller
 {
@@ -40,24 +41,41 @@ class ManageApplicationController extends Controller
      * @return view
      */
     public function addApplication(Request $request){
-        $validatedData = $request->validate([
-            'name' => 'required|max:255',
-            'description' => 'required',
-            'website' => 'required|max:255',
-            'location' => 'required|max:255',
-            'success' => 'required|max:255'
-        ]);
+        $rules = [
+            'name' => 'required|max:255',  
+            'description' => 'required',       
+            'website' => 'required|max:255', 
+            'location' => 'required|max:255',  
+            'success' => 'required|max:255'     
+        ];
+        $messages = [
+            'name.required' => 'Het naamveld mag niet leeg zijn.',
+            'name.max' => 'Het naamveld mag maximaal 255 characters lang zijn.',
+            'description.required' => 'Het beschrijvingsveld mag niet leeg zijn.',
+            'website.required' => 'Het websiteveld mag niet leeg zijn.',
+            'website.max' => 'Het websiteveld mag maximaal 255 characters lang zijn.',
+            'location.required' => 'Het locatieveld mag niet leeg zijn.',
+            'location.max' => 'Het locatieveld mag maximaal 255 characters lang zijn.',
+            'success.required' => 'Het succesveld mag niet leeg zijn.',
+            'success.max' => 'Het succesveld mag maximaal 255 characters lang zijn.'
+        ];
 
-        $addData = new Application;
-        $addData->user_id = Auth::id();
-        $addData->name = $request->input('name');
-        $addData->job_description = $request->input('description');
-        $addData->website = $request->input('website');
-        $addData->location = $request->input('location');
-        $addData->success = $request->input('success');
-        $addData->save();
+        $validator = Validator::make($request->all(), $rules, $messages);
 
-        return redirect('/dashboard')->with('success', 'Vacature succesvol opgeslagen.');
+        if($validator->fails()){
+            return \Redirect::back()->withErrors($validator)->withInput();
+        }else{
+            $addData = new Application;
+            $addData->user_id = Auth::id();
+            $addData->name = $request->input('name');
+            $addData->job_description = $request->input('description');
+            $addData->website = $request->input('website');
+            $addData->location = $request->input('location');
+            $addData->success = $request->input('success');
+            $addData->save();
+    
+            return redirect('/dashboard')->with('success', 'Vacature succesvol opgeslagen.');
+        }   
     }
     /**
      * Shows the edit page to edit a job
@@ -77,23 +95,40 @@ class ManageApplicationController extends Controller
      * @return view
      */
     public function editApplication(Request $request, $id){
-        $validatedData = $request->validate([
-            'name' => 'required|max:255',
-            'description' => 'required',
-            'website' => 'required|max:255',
-            'location' => 'required|max:255',
-            'success' => 'required|max:255'
-        ]);
+        $rules = [
+            'name' => 'required|max:255',  
+            'description' => 'required',       
+            'website' => 'required|max:255', 
+            'location' => 'required|max:255',  
+            'success' => 'required|max:255'     
+        ];
+        $messages = [
+            'name.required' => 'Het naamveld mag niet leeg zijn.',
+            'name.max' => 'Het naamveld mag maximaal 255 characters lang zijn.',
+            'description.required' => 'Het beschrijvingsveld mag niet leeg zijn.',
+            'website.required' => 'Het websiteveld mag niet leeg zijn.',
+            'website.max' => 'Het websiteveld mag maximaal 255 characters lang zijn.',
+            'location.required' => 'Het locatieveld mag niet leeg zijn.',
+            'location.max' => 'Het locatieveld mag maximaal 255 characters lang zijn.',
+            'success.required' => 'Het succesveld mag niet leeg zijn.',
+            'success.max' => 'Het succesveld mag maximaal 255 characters lang zijn.'
+        ];
 
-        $editData = Application::find($id);
-        $editData->name = $request->input('name');
-        $editData->job_description = $request->input('description');
-        $editData->website = $request->input('website');
-        $editData->location = $request->input('location');
-        $editData->success = $request->input('success');
-        $editData->save();
+        $validator = Validator::make($request->all(), $rules, $messages);
 
-        return redirect('/dashboard')->with('success', 'Vacature succesvol bijgewerkt.');
+        if($validator->fails()){
+            return \Redirect::back()->withErrors($validator)->withInput();
+        }else{
+            $editData = Application::find($id);
+            $editData->name = $request->input('name');
+            $editData->job_description = $request->input('description');
+            $editData->website = $request->input('website');
+            $editData->location = $request->input('location');
+            $editData->success = $request->input('success');
+            $editData->save();
+
+            return redirect('/dashboard')->with('success', 'Vacature succesvol bijgewerkt.');
+        }
     }
     /**
      * Gets the delete page

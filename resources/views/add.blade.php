@@ -8,7 +8,15 @@
         <x-slot name="logo">
         </x-slot>
 
-    <x-jet-validation-errors class="mb-4" />
+        @if ($errors->any())
+            <div>
+                <ul class="mt-3 list-disc list-inside text-sm text-red-600">
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <div class="container">
             <div class="formBx">
                 <form method="POST" action="{{ route('addApplication') }}">

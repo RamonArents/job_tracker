@@ -72,6 +72,7 @@ class ManageApplicationController extends Controller
             $addData->website = $request->input('website');
             $addData->location = $request->input('location');
             $addData->success = $request->input('success');
+            $addData->favorite = 1;
             $addData->save();
     
             return redirect('/dashboard')->with('success', 'Vacature succesvol opgeslagen.');
